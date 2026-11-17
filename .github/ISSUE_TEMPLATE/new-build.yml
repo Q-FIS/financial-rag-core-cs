@@ -1,0 +1,37 @@
+name: New build proposal
+description: Propose a team project for builds/.
+title: "[build] <build-name>"
+labels: ["type:build", "status:proposed"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Build name
+      description: Lowercase words joined by hyphens, e.g. mini-shell
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it does
+      description: Two or three sentences. What goes in, what comes out.
+    validations:
+      required: true
+  - type: textarea
+    id: team
+    attributes:
+      label: Team
+      description: GitHub handles of the people building it.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes it builds on
+      description: Which topics from notes/README.md this build uses.
+  - type: dropdown
+    id: finforge
+    attributes:
+      label: Could it join FinForge later?
+      options:
+        - "No"
+        - Maybe
+        - "Yes"

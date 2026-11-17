@@ -1,0 +1,25 @@
+name: Stuck or something is broken
+description: A template, Makefile, tool or build doesn't work, or you're stuck.
+title: "[help] <what's wrong in a few words>"
+labels: ["type:help"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What you tried
+      description: The exact commands you ran, and the folder you ran them in.
+    validations:
+      required: true
+  - type: textarea
+    id: got
+    attributes:
+      label: What happened
+      description: Paste the full error message. Text, not a screenshot.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Your setup
+      description: e.g. macOS 15 + tools/linux-shell.sh, Windows 11 + WSL Ubuntu 24.04, Ubuntu 24.04

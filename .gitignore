@@ -1,0 +1,31 @@
+# Build output (every Makefile writes into build/)
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.out
+*.exe
+*.dSYM/
+a.out
+
+# Tracing and debugging output
+trace.txt
+*.pcap
+core
+core.*
+vgcore.*
+
+# Personal experiments: put anything you are not ready to share here
+sandbox/
+
+# Editors and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Secrets: never commit these (see SECURITY.md)
+.env
+*.pem
+*.key

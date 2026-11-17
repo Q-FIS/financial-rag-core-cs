@@ -1,0 +1,24 @@
+name: Question about a note
+description: Ask the author of a note something. Answers end up in the note.
+title: "[note] <topic>: <your question in a few words>"
+labels: ["type:question", "area:notes"]
+body:
+  - type: input
+    id: note
+    attributes:
+      label: Which note?
+      description: Path or link, e.g. notes/os/fork-exec-wait.md
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Quote the line or section you are asking about. If you ran something and got a different result, paste exactly what you ran and what you got.
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Note author's GitHub handle
+      description: Without the @ sign. A lead will tag them.

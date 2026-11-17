@@ -1,0 +1,23 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: Build templates and every build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          set -e
+          for dir in templates/build templates/lab-repo/lab-01 builds/*/; do
+            [ -f "$dir/Makefile" ] || continue
+            echo "::group::make -C $dir"
+            make -C "$dir"
+            echo "::endgroup::"
+          done

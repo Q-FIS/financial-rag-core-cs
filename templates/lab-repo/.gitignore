@@ -1,0 +1,12 @@
+# Build output
+build/
+*.o
+*.a
+*.so
+*.out
+*.dSYM/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
